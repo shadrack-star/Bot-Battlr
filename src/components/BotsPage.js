@@ -8,7 +8,7 @@ function BotsPage() {
 
 
   useEffect((armyBot) => {
-    fetch("http://localhost:8002/bots")
+    fetch("https://bot-battlr-hlcc.onrender.com/bots")
     .then((res) => res.json())
     .then(bots => setBots(bots))
   }, [])
@@ -31,7 +31,7 @@ function BotsPage() {
   setBotArmy(deleteArmyBots)
 
 
-  fetch(`http://localhost:8002/bots/${armyBot.id}`,{
+  fetch(`https://bot-battlr-hlcc.onrender.com/bots/${armyBot.id}`,{
     method: 'DELETE'
   })
   }
